@@ -124,7 +124,13 @@ onMounted(() => {
 						<Icon name="pajamas:discord" class="text-white text-2xl"/>
 					</a>
 					<p class="text-xs mx-auto text-[--lessimportant] italic">
-						Matrix bridge coming soon™
+						Gonna
+						<span class="underline decoration-dotted cursor-default group">
+							<div class="hidden absolute top-0 left-0 w-full h-full group-hover:block pointer-events-none z-50">
+								<NuxtImg src="/img/bucket.png" class="w-full h-full"/>
+							</div>
+							bridge it</span>
+						to Matrix soon™
 					</p>
 				</div>
 			</div>
