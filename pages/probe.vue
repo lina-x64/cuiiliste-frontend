@@ -69,31 +69,34 @@ onMounted(() => {
 		<div id="resultDiv" :class="hasResult ? '' : 'hidden'">
 			<div class="text-2xl font-bold">
 				<span v-if="finalResultText === 'BLOCKED'">
-					"{{ domainToCheck }}" wurde durch die CUII <span class="text-accent">blockiert</span>.
+					"{{ domainToCheck }}" wurde durch die CUII höchstwahrscheinlich <span class="text-accent">blockiert</span>.
 				</span>
 				<span v-else-if="finalResultText === 'PARTIALLY_BLOCKED'">
 					"{{ domainToCheck }}" ist <span class="text-accent">teilweise blockiert</span>.
 				</span>
 				<span v-else-if="finalResultText === 'NOT_BLOCKED'">
-					"{{ domainToCheck }}" ist ganz normal <span class="text-success">erreichbar</span>.
+					"{{ domainToCheck }}" ist <span class="text-success">nicht gesperrt</span>.
 				</span>
-				<span v-else-if="finalResultText === 'FAKE_BLOCKED'">
-					Irgendein Schlingel dachte, es wäre lustig, so zu tun als wäre {{ domainToCheck }} blockiert. <span class="text-success">Ist es aber nicht.</span>
+				<span v-else-if="finalResultText === 'NON_CUII_BLOCK'">
+					"{{ domainToCheck }}" ist zwar (teilweise) blockiert, aber <span class="text-[--lessimportant]">nicht durch die CUII</span>.
 				</span>
+<!--				<span v-else-if="finalResultText === 'FAKE_BLOCKED'">-->
+<!--					Irgendein Schlingel dachte, es wäre lustig, so zu tun als wäre {{ domainToCheck }} blockiert. <span class="text-success">Ist es aber nicht.</span>-->
+<!--				</span>-->
 				<span v-else-if="finalResultText === 'ERROR'">
 					Es gab einen Fehler beim Testen der Domain "{{ domainToCheck }}". <span class="text-error">Bitte versuche es später erneut.</span>
 				</span>
-				<span v-else-if="finalResultText === 'NXDOMAIN'">
-					Die Domain "{{ domainToCheck }}" konnte <span class="text-[--lessimportant]">nicht aufgelöst</span> werden.
-				</span>
+<!--				<span v-else-if="finalResultText === 'NXDOMAIN'">-->
+<!--					Die Domain "{{ domainToCheck }}" konnte <span class="text-[&#45;&#45;lessimportant]">nicht aufgelöst</span> werden.-->
+<!--				</span>-->
 			</div>
 			<div class="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4" id="blockingResolvers">
 				<ResolverResponse v-for="resolver in blockingResolvers" :name="resolver.resolver" :response="resolver.response" :ping="resolver.duration" :key="resolver.resolver" />
 			</div>
-			<div class="text-2xl font-bold">Von der CUII-Unabhängige resolver:</div>
-			<div class="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4" id="nonBlockingResolvers">
-				<ResolverResponse v-for="resolver in nonBlockingResolvers" :name="resolver.resolver" :response="resolver.response" :ping="resolver.duration" :key="resolver.resolver" />
-			</div>
+<!--			<div class="text-2xl font-bold">Von der CUII-Unabhängige resolver:</div>-->
+<!--			<div class="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4" id="nonBlockingResolvers">-->
+<!--				<ResolverResponse v-for="resolver in nonBlockingResolvers" :name="resolver.resolver" :response="resolver.response" :ping="resolver.duration" :key="resolver.resolver" />-->
+<!--			</div>-->
 		</div>
 	</div>
 	<div class="fixed bottom-0 right-0 p-4">
