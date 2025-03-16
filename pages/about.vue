@@ -38,7 +38,7 @@ useSeoMeta({
 			</p>
 			<ul class="list-disc ml-6 mt-2">
 				<li><NuxtLink href="https://northernsi.de" class="link font-bold" target="_blank">Northernside</NuxtLink> für das ranholen der großen Domainliste</li>
-				<li><NuxtLink href="https://julias.zone" class="link font-bold" target="_blank">Julia</NuxtLink> für DNS-Resolver-Tests und mehr</li>
+				<li><NuxtLink href="https://86dd.eu" class="link font-bold" target="_blank">86dd.eu</NuxtLink> für DNS-Resolver-Tests und mehr</li>
 				<li><NuxtLink href="https://veronoi.cc/" class="link font-bold" target="_blank">Veronoicc</NuxtLink> für die Suche nach offenen DNS-Resolvern</li>
 				<li><NuxtLink href="https://discord.gg/eJMnvktRMA" class="link" target="_blank">SSI</NuxtLink>,
 					einem echt coolen technischen Discord-Server mit vielen coolen Nerds -> <NuxtLink href="https://ssi.fyi" class="link" target="_blank">ssi.fyi</NuxtLink></li>
