@@ -11,11 +11,11 @@ useSeoMeta({
 
 		<div class="bg-base-300 shadow-lg p-6 rounded-lg">
 			<p class="text-lg">
-				Hey, diese Seite wird hauptsächlich von mir, Damian (aka <a href="https://damcraft.de" class="link" target="_blank">damcraft.de</a>) betrieben.
+				Hey, diese Seite wird hauptsächlich von mir, Lina (<a href="https://lina.sh" class="link" target="_blank">lina.sh</a>) betrieben.
 			</p>
 			<p class="mt-2">
-				Ich bin ein 17-jähriger Schüler aus Deutschland mit einer Leidenschaft für Informatik. Dieses Projekt
-				ist nicht nur von mir allein entstanden; einige Freunde haben mir großartig geholfen (Schaue weiter unten!).
+				Ich bin eine 18-jährige Entwicklerin aus Deutschland mit einer Leidenschaft für Informatik. Dieses Projekt
+				ist nicht nur dank mir allein entstanden; einige Freunde haben mir großartig geholfen (Schaue weiter unten!).
 				Tritt unserem <a :href="useRuntimeConfig().public.discord_invite" class="link">Discord-Server</a> bei, um mit uns zu
 				sprechen. Falls du Informationen zur CUII hast, teile sie dort gerne mit uns.
 				Andere Kontaktmöglichkeiten findest du weiter unten.
@@ -24,7 +24,7 @@ useSeoMeta({
 			<ul class="list-disc ml-6 mt-1">
 				<li>Discord-Server: <a :href="useRuntimeConfig().public.discord_invite" class="link" target="_blank">{{ useRuntimeConfig().public.discord_invite }}</a></li>
 				<li>E-Mail: <a href="mailto:contact@cuiiliste.de" class="link" target="_blank">contact@cuiiliste.de</a></li>
-				<li>Direkter Kontakt: Finde mich auf <a href="https://damcraft.de" class="link" target="_blank">damcraft.de</a> –
+				<li>Direkter Kontakt: Finde mich auf <a href="https://lina.sh" class="link" target="_blank">lina.sh</a> –
 					Matrix, Discord und mehr.
 				</li>
 			</ul>
@@ -105,7 +105,7 @@ useSeoMeta({
 		<div class="my-6 mx-auto flex justify-center">
 			<NuxtLink  href="https://ssi.fyi/" target="_blank"><NuxtImg src="/img/ssi-88x31.gif" /></NuxtLink>
 			<div class="mx-2"></div>
-			<NuxtLink  href="https://damcraft.de/" target="_blank"><NuxtImg src="/img/dam-88x31.gif" /></NuxtLink>
+			<NuxtLink  href="https://lina.sh/" target="_blank"><NuxtImg src="/img/lina-88x31.gif" /></NuxtLink>
 		</div>
 	</div>
 </template>
