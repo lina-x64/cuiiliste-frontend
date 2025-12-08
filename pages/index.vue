@@ -110,28 +110,41 @@ onMounted(() => {
 			</NuxtLink>
 		</div>
 		<div class="flex flex-row justify-between">
-			<div class="bg-base-300 shadow-lg w-1/2 flex mr-1 sm:mr-2 p-2 sm:p-4">
-				<div class="flex flex-col">
-					<h2 class="text-2xl font-bold">
-						Discord
+			<div class="bg-base-300 shadow-lg w-1/2 p-4 rounded-xl flex flex-col gap-4">
+				<div>
+					<h2 class="text-2xl font-bold mb-2">
+						Socials
 					</h2>
-					<p>
-						Tritt unserem Discord-Server bei um Benachrichtigungen zu erhalten oder Informationen auszutauschen.
+					<p class="text-white/80">
+						Tritt unserem Discord-Server oder Matrix-Space bei um Benachrichtigungen zu erhalten oder
+						Informationen auszutauschen.
 					</p>
-					<a class="bg-primary text-white py-3 px-5 m-auto rounded-lg flex items-center gap-2 hover:bg-primary-hover mt-2"
+				</div>
+
+				<div class="grid grid-cols-[1fr_auto_1fr] gap-3 items-center">
+
+					<a class="bg-primary text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-hover w-full transition-colors"
 					   :href="useRuntimeConfig().public.discord_invite">
-						<span class="mr-2">Beitreten</span>
-						<Icon name="pajamas:discord" class="text-white text-2xl"/>
+						<span>Beitreten</span>
+						<Icon name="pajamas:discord" class="text-xl"/>
 					</a>
-					<p class="text-xs mx-auto text-[--lessimportant] italic">
-						Gonna
-						<span class="underline decoration-dotted cursor-default group">
-							<div class="hidden absolute top-0 left-0 w-full h-full group-hover:block pointer-events-none z-50">
-								<NuxtImg src="/img/bucket.png" class="w-full h-full"/>
-							</div>
-							bridge it</span>
-						to Matrix soon™
-					</p>
+
+					<div class="flex items-center w-12 sm:w-16">
+						<div class="h-[2px] flex-1 bg-white/20 rounded-full"></div>
+
+						<div class="px-1">
+							<Icon name="material-symbols:link" class="text-white/50 text-xl block"/>
+						</div>
+
+						<div class="h-[2px] flex-1 bg-white/20 rounded-full"></div>
+					</div>
+
+					<a class="bg-[#0dbd8b] text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:brightness-110 w-full transition-colors"
+					   :href="'https://matrix.to/#/'+useRuntimeConfig().public.matrix_space">
+						<span class="truncate">{{ useRuntimeConfig().public.matrix_space }}</span>
+						<Icon name="simple-icons:matrix" class="text-xl flex-shrink-0"/>
+					</a>
+
 				</div>
 			</div>
 			<div class="bg-base-300 shadow-lg w-1/2 flex ml-1 sm:ml-2 p-2 sm:p-4">

@@ -16,12 +16,14 @@ useSeoMeta({
 			<p class="mt-2">
 				Ich bin eine 18-jährige Entwicklerin aus Deutschland mit einer Leidenschaft für Informatik. Dieses Projekt
 				ist nicht nur dank mir allein entstanden; einige Freunde haben mir großartig geholfen (Schaue weiter unten!).
-				Tritt unserem <a :href="useRuntimeConfig().public.discord_invite" class="link">Discord-Server</a> bei, um mit uns zu
+				Tritt unserem <a :href="useRuntimeConfig().public.discord_invite" class="link">Discord-Server</a> oder
+				<a :href="'https://matrix.to/#/'+useRuntimeConfig().public.matrix_space" class="link">Matrix space</a> bei, um mit uns zu
 				sprechen. Falls du Informationen zur CUII hast, teile sie dort gerne mit uns.
 				Andere Kontaktmöglichkeiten findest du weiter unten.
 			</p>
 			<h2 class="text-2xl font-bold mt-4">Kontakt</h2>
 			<ul class="list-disc ml-6 mt-1">
+				<li>Matrix-Space: <a :href="'https://matrix.to/#/'+useRuntimeConfig().public.matrix_space" class="link" target="_blank">{{ useRuntimeConfig().public.matrix_space }}</a></li>
 				<li>Discord-Server: <a :href="useRuntimeConfig().public.discord_invite" class="link" target="_blank">{{ useRuntimeConfig().public.discord_invite }}</a></li>
 				<li>E-Mail: <a href="mailto:contact@cuiiliste.de" class="link" target="_blank">contact@cuiiliste.de</a></li>
 				<li>Direkter Kontakt: Finde mich auf <a href="https://lina.sh" class="link" target="_blank">lina.sh</a> –
