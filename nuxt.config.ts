@@ -20,6 +20,8 @@ export default defineNuxtConfig({
         }
     },
     routeRules: {
+        '/about': { headers: { 'X-Robots-Tag': 'noindex, follow' } },
+
         '/cuii/domain-liste': {redirect: {to: '/domains', statusCode: 301}},
         '/cuii/dns/**': {redirect: {to: '/umgehen', statusCode: 301}},
         '/cuii/pi-hole': {redirect: {to: '/umgehen', statusCode: 301}},

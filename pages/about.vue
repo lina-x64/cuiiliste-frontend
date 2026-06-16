@@ -2,7 +2,7 @@
 useSeoMeta({
 	title: 'CUII Liste - Kontakt',
 	ogTitle: 'CuiiListe.de - Kontakt',
-	robots: 'noindex, nofollow'
+	robots: 'noindex, follow'
 })
 </script>
 
