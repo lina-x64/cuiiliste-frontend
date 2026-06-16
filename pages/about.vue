@@ -2,6 +2,7 @@
 useSeoMeta({
 	title: 'CUII Liste - Über uns',
 	ogTitle: 'CuiiListe.de - Über uns',
+	robots: 'noindex, nofollow'
 })
 </script>
 
@@ -11,15 +12,18 @@ useSeoMeta({
 
 		<div class="bg-base-300 shadow-lg p-6 rounded-lg">
 			<p class="text-lg">
-				Hey, diese Seite wird hauptsächlich von mir, Lina (<a href="https://lina.sh" class="link" target="_blank">lina.sh</a>) betrieben.
+				Hey, diese Seite wurde hauptsächlich von mir, Lina (<a href="https://lina.sh" class="link" target="_blank">lina.sh</a>),
+				entwickelt und ins Leben gerufen.
 			</p>
 			<p class="mt-2">
-				Ich bin eine 18-jährige Entwicklerin aus Deutschland mit einer Leidenschaft für Informatik. Dieses Projekt
-				ist nicht nur dank mir allein entstanden; einige Freunde haben mir großartig geholfen (Schaue weiter unten!).
-				Tritt unserem <a :href="useRuntimeConfig().public.discord_invite" class="link">Discord-Server</a> oder
-				<a :href="'https://matrix.to/#/'+useRuntimeConfig().public.matrix_space" class="link">Matrix space</a> bei, um mit uns zu
-				sprechen. Falls du Informationen zur CUII hast, teile sie dort gerne mit uns.
-				Andere Kontaktmöglichkeiten findest du weiter unten.
+				Ich bin eine 18-jährige Entwicklerin aus Deutschland mit einer Leidenschaft für Informatik. Dieses
+				Projekt ist nicht nur durch mich allein entstanden; einige Freunde haben großartig mitgeholfen (siehe
+				weiter unten!). Tritt gerne unserem <a :href="useRuntimeConfig().public.discord_invite" class="link">Discord-Server</a>
+				oder
+				<a :href="'https://matrix.to/#/'+useRuntimeConfig().public.matrix_space" class="link">Matrix-Space</a>
+				bei, um mit uns in Kontakt zu treten. Falls du Informationen zur CUII hast, teile sie dort gerne mit
+				uns. Andere Kontaktmöglichkeiten findest du weiter
+				unten.
 			</p>
 			<h2 class="text-2xl font-bold mt-4">Kontakt</h2>
 			<ul class="list-disc ml-6 mt-1">
@@ -36,7 +40,7 @@ useSeoMeta({
 			<h2 class="text-2xl font-bold">Danksagungen</h2>
 			<p class="mt-2">
 				Danke an alle, die mich bei diesem Projekt unterstützt haben. Ohne euch wäre diese Seite nicht
-				möglich. Besonderer Dank geht an:
+				möglich gewesen. Besonderer Dank geht an:
 			</p>
 			<ul class="list-disc ml-6 mt-2">
 				<li><NuxtLink href="https://northernsi.de" class="link font-bold" target="_blank">Northernside</NuxtLink> für das ranholen der großen Domainliste</li>
@@ -50,12 +54,30 @@ useSeoMeta({
 		</div>
 
 		<div class="bg-base-300 shadow-lg p-6 rounded-lg mt-6">
+			<h2 class="text-2xl font-bold">Impressum</h2>
+			<p class="mt-2">
+				Elias Zeidler<br>
+				Einbrungerstraße 82<br>
+				40489 Düsseldorf<br><br>
+
+				Inhaltlich verantwortlich nach § 18 Abs. 2 MStV: Elias Zeidler
+			</p>
+		</div>
+
+		<div class="bg-base-300 shadow-lg p-6 rounded-lg mt-6">
 			<h2 class="text-2xl font-bold">Was ist das hier?</h2>
 			<p class="mt-2">
-				Diese Seite beschäftigt sich mit der CUII und deren Sperrlisten. Die CUII ist eine private Organisation,
-				die Webseiten sperrt, die ihrer Meinung nach gegen das Urheberrecht verstoßen – und das ohne
-				gerichtliche Beschlüsse.
-				Zudem wirkt ihre Vorgehensweise, meiner Meinung nach, sehr intransparent.
+				Diese Seite beschäftigt sich mit der CUII und deren Sperrlisten. Die CUII ist ein privater
+				Zusammenschluss, der Internetsperren durchsetzt. Zwar stützt man sich mittlerweile auf Gerichtsurteile,
+				oft handelt es sich dabei jedoch um sogenannte Versäumnisurteile: Erscheint ein Internetanbieter nicht
+				vor Gericht, wird die Sperre ohne tiefe inhaltliche Prüfung erlassen – und alle anderen Provider ziehen
+				"freiwillig" mit.
+			</p>
+			<p class="mt-2">
+				Zudem werden nachträglich oft weitere Domains ohne neuen gerichtlichen Beschluss blockiert, wenn die
+				CUII intern entscheidet, dass diese zu einem bereits gesperrten Angebot gehören. Da jegliche
+				Domain-Sperrlisten von der CUII strikt geheim gehalten werden, ist diese Vorgehensweise unglaublich
+				intransparent.
 			</p>
 		</div>
 
@@ -66,13 +88,15 @@ useSeoMeta({
 				Du kannst den Quellcode für unser Frontend und die API auf GitHub einsehen und daran mitarbeiten.
 			</p>
 			<div class="mt-4 flex gap-4">
-				<a href="https://github.com/DAMcraft/cuiiliste-frontend" class="btn bg-black hover:bg-black text-white" target="_blank">
+				<a href="https://github.com/DAMcraft/cuiiliste-frontend" class="btn bg-black hover:bg-black text-white"
+				   target="_blank">
 					CuiiListe-Frontend
-					<Icon name="mdi:github" class="ml-2 text-2xl" />
+					<Icon name="mdi:github" class="ml-2 text-2xl"/>
 				</a>
-				<a href="https://github.com/DAMcraft/cuiiliste" class="btn bg-black hover:bg-black text-white" target="_blank">
+				<a href="https://github.com/DAMcraft/cuiiliste" class="btn bg-black hover:bg-black text-white"
+				   target="_blank">
 					CuiiListe-API
-					<Icon name="mdi:github" class="ml-2 text-2xl" />
+					<Icon name="mdi:github" class="ml-2 text-2xl"/>
 				</a>
 			</div>
 		</div>
@@ -80,34 +104,46 @@ useSeoMeta({
 		<div class="bg-base-300 shadow-lg p-6 rounded-lg mt-6">
 			<h2 class="text-2xl font-bold">Disclaimer</h2>
 			<p class="mt-2">
-				Die auf dieser Website bereitgestellten Informationen dienen ausschließlich allgemeinen Informationszwecken.
-				Trotz sorgfältiger Recherche und regelmäßiger Aktualisierung kann keine Garantie für die Vollständigkeit,
-				Richtigkeit oder Aktualität der Informationen übernommen werden. Die Nutzung der Informationen erfolgt auf eigene Verantwortung.
-				Für eventuelle Schäden oder Konsequenzen, die sich aus der Nutzung der Informationen ergeben, übernehmen wir keine Haftung.
+				Die auf dieser Website bereitgestellten Informationen dienen ausschließlich allgemeinen
+				Informationszwecken.
+				Trotz sorgfältiger Recherche und regelmäßiger Aktualisierung kann keine Garantie für die
+				Vollständigkeit,
+				Richtigkeit oder Aktualität der Informationen übernommen werden. Die Nutzung der Informationen erfolgt
+				auf eigene Verantwortung.
+				Für eventuelle Schäden oder Konsequenzen, die sich aus der Nutzung der Informationen ergeben, übernehmen
+				wir keine Haftung.
 			</p>
 			<p>
 				CUIIListe.de ist eine unabhängige Plattform und steht in keiner offiziellen Beziehung zur CUII.
 				Wir sind nicht mit der CUII verbunden oder von ihr autorisiert.
-				Alle Informationen auf dieser Website basieren auf öffentlich verfügbaren Daten und der persönlichen Recherche.
-				Bei Fragen oder Unsicherheiten hinsichtlich gesperrter Domains oder der CUII wenden Sie sich bitte direkt an die CUII.
+				Alle Informationen auf dieser Website basieren auf öffentlich verfügbaren Daten und der persönlichen
+				Recherche.
+				Bei Fragen oder Unsicherheiten hinsichtlich gesperrter Domains oder der CUII wenden Sie sich bitte
+				direkt an die CUII.
 			</p>
 			<p>
 				CUIIListe.de enthält Links zu externen Websites, die nicht von uns betrieben werden.
-				Wir haben keinen Einfluss auf den Inhalt und die Gestaltung dieser externen Websites und übernehmen daher keine Verantwortung für deren Inhalte.
+				Wir haben keinen Einfluss auf den Inhalt und die Gestaltung dieser externen Websites und übernehmen
+				daher keine Verantwortung für deren Inhalte.
 				Die Verantwortung für den Inhalt der verlinkten Seiten liegt ausschließlich bei deren Betreibern.
-				Das Setzen eines Links auf eine externe Website bedeutet nicht, dass wir deren Inhalte oder die Betreiber der Seite unterstützen.
+				Das Setzen eines Links auf eine externe Website bedeutet nicht, dass wir deren Inhalte oder die
+				Betreiber der Seite unterstützen.
 				Bei der Verlinkung haben wir die entsprechenden Seiten auf mögliche rechtliche Verstöße überprüft.
-				Sollte jedoch eine verlinkte Seite gegen geltendes Recht verstoßen oder problematische Inhalte aufweisen,
+				Sollte jedoch eine verlinkte Seite gegen geltendes Recht verstoßen oder problematische Inhalte
+				aufweisen,
 				bitten wir um eine entsprechende Mitteilung, damit wir den Link gegebenenfalls entfernen können.
 				Die Nutzung der verlinkten Websites erfolgt auf eigene Verantwortung.
-				Für die Inhalte der externen Seiten und die daraus resultierenden Folgen übernehmen wir keinerlei Haftung.
+				Für die Inhalte der externen Seiten und die daraus resultierenden Folgen übernehmen wir keinerlei
+				Haftung.
 			</p>
 		</div>
 
 		<div class="my-6 mx-auto flex justify-center">
-			<NuxtLink  href="https://ssi.fyi/" target="_blank"><NuxtImg src="/img/ssi-88x31.gif" /></NuxtLink>
-			<div class="mx-2"></div>
-			<NuxtLink  href="https://lina.sh/" target="_blank"><NuxtImg src="/img/lina-88x31.gif" /></NuxtLink>
+			<!--			<NuxtLink  href="https://ssi.fyi/" target="_blank"><NuxtImg src="/img/ssi-88x31.gif" /></NuxtLink>-->
+			<!--			<div class="mx-2"></div>-->
+			<NuxtLink href="https://lina.sh/" target="_blank">
+				<NuxtImg src="/img/lina-88x31.gif"/>
+			</NuxtLink>
 		</div>
 	</div>
 </template>

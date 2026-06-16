@@ -77,10 +77,6 @@ amIAffected().then((res) => {
 					<CuiiMember logo-link="/img/anbieter/vodafone.png" name="Vodafone"/>
 				</div>
 			</div>
-			<div class="mt-5 text-lg">
-				Sie blockieren Websiten, <span class="font-bold">ohne richterliche Anordnung</span>,
-				aufgrund von Empfehlungen der CUII.
-			</div>
 		</div>
 	</div>
 </template>

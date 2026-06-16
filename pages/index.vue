@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import QrcodeVue from 'qrcode.vue'
+
 definePageMeta({
 	layout: 'default'
 })
@@ -25,18 +26,20 @@ onMounted(() => {
 					<div class="text-white text-2xl font-bold">Diese Webseite ist aus urheberrechtlichen Gründen nicht
 						verfügbar.
 					</div>
-					<div class="text-white">Die CUII hat entschieden, diese Seite ohne gerichtlichen Beschluss zu
-						sperren.
+					<div class="text-white">Die CUII veranlasst die Sperrung dieser Seite – oft ohne tiefgehende
+						richterliche
+						Prüfung.
 					</div>
 				</div>
 			</div>
 			<h2 class="text-2xl font-bold">
-				Selbstjustiz? Nein danke!
+				Fragwürdige Gerichtsbeschlüsse
 			</h2>
 			<p>
-				Die CUII ist eine private Organisation, die sich selbst das Recht nimmt, Webseiten zu sperren, die ihrer
-				Meinung nach gegen das Urheberrecht verstoßen.
-				Dies geschieht ohne gerichtliche Beschlüsse - und Internetanbieter ziehen mit.
+				Die CUII ist ein privater Zusammenschluss, der Internetsperren durchsetzt. Zwar stützt man sich
+				mittlerweile auf Gerichtsurteile, oft handelt es sich dabei jedoch um sogenannte Versäumnisurteile:
+				Erscheint ein Internetanbieter nicht vor Gericht, wird die Sperre ohne tiefe inhaltliche Prüfung
+				erlassen - und alle anderen Provider ziehen "freiwillig" mit.
 			</p>
 		</div>
 
@@ -91,7 +94,8 @@ onMounted(() => {
 						Zensur umgehen
 					</h2>
 					<p class="text-white">
-						Wir zeigen Ihnen wie Sie <b>ganz einfach</b> die Selbstjustiz der CUII umgehen können.
+						Wir zeigen Ihnen wie Sie <b>ganz einfach</b> die intransparenten Netzsperren der CUII umgehen
+						können.
 					</p>
 				</div>
 				<Icon name="mdi:arrow-right" class="text-white text-6xl ml-auto"/>
@@ -109,129 +113,60 @@ onMounted(() => {
 				<Icon name="mdi:arrow-right" class="text-white text-6xl ml-auto"/>
 			</NuxtLink>
 		</div>
-		<div class="flex flex-row justify-between">
-			<div class="bg-base-300 shadow-lg w-1/2 p-4 rounded-xl flex flex-col gap-4">
-				<div>
-					<h2 class="text-2xl font-bold mb-2">
-						Socials
-					</h2>
-					<p class="text-white/80">
-						Tritt unserem Discord-Server oder Matrix-Space bei um Benachrichtigungen zu erhalten oder
-						Informationen auszutauschen.
-					</p>
-				</div>
+		<div class="bg-base-300 shadow-lg p-4 flex flex-col">
+			<div>
+				<h2 class="text-2xl font-bold mb-2">
+					Socials
+				</h2>
+				<p class="text-white/80">
+					Tritt unserem Discord-Server oder Matrix-Space bei um Benachrichtigungen zu erhalten oder
+					Informationen auszutauschen.
+				</p>
+			</div>
 
-				<div class="grid grid-cols-[1fr_auto_1fr] gap-3 items-center">
+			<div class="grid grid-cols-[1fr_auto_1fr] gap-3 items-center">
 
-					<a class="bg-primary text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-hover w-full transition-colors"
-					   :href="useRuntimeConfig().public.discord_invite">
-						<span>Beitreten</span>
-						<Icon name="pajamas:discord" class="text-xl"/>
-					</a>
+				<a class="bg-primary text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-hover w-full transition-colors"
+				   :href="useRuntimeConfig().public.discord_invite">
+					<span>Beitreten</span>
+					<Icon name="pajamas:discord" class="text-xl"/>
+				</a>
 
-					<div class="flex items-center w-12 sm:w-16">
-						<div class="h-[2px] flex-1 bg-white/20 rounded-full"></div>
+				<div class="flex items-center w-12 sm:w-16">
+					<div class="h-[2px] flex-1 bg-white/20 rounded-full"></div>
 
-						<div class="px-1">
-							<Icon name="material-symbols:link" class="text-white/50 text-xl block"/>
-						</div>
-
-						<div class="h-[2px] flex-1 bg-white/20 rounded-full"></div>
+					<div class="px-1">
+						<Icon name="material-symbols:link" class="text-white/50 text-xl block"/>
 					</div>
 
-					<a class="bg-[#0dbd8b] text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:brightness-110 w-full transition-colors"
-					   :href="'https://matrix.to/#/'+useRuntimeConfig().public.matrix_space">
-						<span class="truncate">{{ useRuntimeConfig().public.matrix_space }}</span>
-						<Icon name="simple-icons:matrix" class="text-xl flex-shrink-0"/>
-					</a>
+					<div class="h-[2px] flex-1 bg-white/20 rounded-full"></div>
+				</div>
 
-				</div>
-			</div>
-			<div class="bg-base-300 shadow-lg w-1/2 flex ml-1 sm:ml-2 p-2 sm:p-4">
-				<div class="flex flex-col">
-					<h2 class="text-2xl font-bold">
-						Über uns
-					</h2>
-					<p>
-						Erfahre mehr über uns, unsere Ziele und wie diese Webseite funzt.
-					</p>
-					<NuxtLink class="bg-base-100 p-3 px-5 m-auto rounded-lg flex items-center gap-2 hover:bg-primary-hover mt-2"
-					          to="/about">
-						<span class="mr-2">Mehr erfahren</span>
-						<Icon name="mdi:arrow-right" class="text-2xl"/>
-					</NuxtLink>
-				</div>
+				<a class="bg-[#0dbd8b] text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:brightness-110 w-full transition-colors"
+				   :href="'https://matrix.to/#/'+useRuntimeConfig().public.matrix_space">
+					<span class="truncate">{{ useRuntimeConfig().public.matrix_space }}</span>
+					<Icon name="simple-icons:matrix" class="text-xl flex-shrink-0"/>
+				</a>
+
 			</div>
 		</div>
-		<div class="bg-base-300 shadow-lg p-4 flex">
-			<Icon name="mdi:heart" class="text-9xl hidden sm:block"/>
-			<div class="flex flex-col ml-4">
+		<div class="bg-base-300 shadow-lg p-4 flex flex-col">
+			<div class="flex flex-col">
 				<h2 class="text-2xl font-bold">
-					Uns unterstützen
+					Über uns
 				</h2>
 				<p>
-					Wir arbeiten mit viel Liebe und Zeit an dieser Webseite. Die Seite ist komplett werbefrei und wir verdienen
-					kein Geld damit. Wenn Sie uns unterstützen möchten, können Sie uns gerne eine Spende zukommen lassen.
+					Erfahre mehr über uns, unsere Ziele und wie diese Webseite funzt.
 				</p>
-				<div class="flex gap-4 mt-2">
-					<div class="bg-base-100 p-2 rounded-lg flex items-center gap-2 hover:bg-base-200 hover:cursor-pointer"
-					     onclick="bitcoin_modal.showModal()">
-						<Icon name="mdi:bitcoin" class="text-2xl"/>
-						Bitcoin
-					</div>
-					<div class="bg-base-100 p-2 rounded-lg flex items-center gap-2 hover:bg-base-200 hover:cursor-pointer"
-					     onclick="monero_modal.showModal()">
-						<Icon name="mingcute:monero-fill" class="text-2xl"/>
-						Monero
-					</div>
-					<NuxtLink class="bg-base-100 p-2 rounded-lg flex items-center gap-2 hover:bg-base-200 hover:cursor-pointer"
-					   :to="useRuntimeConfig().public.paypal_donate_url"
-					   target="_blank" rel="noopener noreferrer">
-						<Icon name="mdi:paypal" class="text-2xl"/>
-						PayPal
-					</NuxtLink>
-				</div>
+				<NuxtLink
+					class="bg-base-100 p-3 px-5 m-auto rounded-lg flex items-center gap-2 hover:bg-primary-hover mt-2"
+					to="/about">
+					<span class="mr-2">Mehr erfahren</span>
+					<Icon name="mdi:arrow-right" class="text-2xl"/>
+				</NuxtLink>
 			</div>
 		</div>
 	</div>
-	<dialog id="bitcoin_modal" class="modal">
-		<div class="modal-box">
-			<h3 class="text-lg font-bold">Vielen Dank, dass Sie überhaupt über eine Spende nachdenken! Es bedeutet uns
-				viel.</h3>
-			<p class="py-4">
-				Falls Sie uns über Bitcoin unterstützen möchten, können Sie dies über folgende Adresse tun:
-				<br>
-				<code class="font-mono text-accent px-1.5 rounded-lg break-all bg-base-200">
-					{{ useRuntimeConfig().public.bitcoin_address }}
-				</code>
-				<QrcodeVue :value="'bitcoin:' + useRuntimeConfig().public.bitcoin_address" :size="200" class="mx-auto mt-2"/>
-			</p>
-			<div class="modal-action">
-				<form method="dialog">
-					<button class="btn">Schließen</button>
-				</form>
-			</div>
-		</div>
-	</dialog>
-	<dialog id="monero_modal" class="modal">
-		<div class="modal-box">
-			<h3 class="text-lg font-bold">Vielen Dank, dass Sie überhaupt über eine Spende nachdenken! Es bedeutet uns
-				viel.</h3>
-			<p class="py-4">
-				Falls Sie uns über Monero (XMR) unterstützen möchten, können Sie dies über folgende Adresse tun:
-				<br>
-				<code class="font-mono text-accent px-1.5 rounded-lg break-all bg-base-200">
-					{{ useRuntimeConfig().public.monero_address }}
-				</code>
-				<QrcodeVue :value="'monero:' + useRuntimeConfig().public.monero_address" :size="200" class="mx-auto mt-2"/>
-			</p>
-			<div class="modal-action">
-				<form method="dialog">
-					<button class="btn">Schließen</button>
-				</form>
-			</div>
-		</div>
-	</dialog>
 </template>
 
 <style scoped>
