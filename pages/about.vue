@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-	title: 'CUII Liste - Über uns',
-	ogTitle: 'CuiiListe.de - Über uns',
+	title: 'CUII Liste - Kontakt',
+	ogTitle: 'CuiiListe.de - Kontakt',
 	robots: 'noindex, nofollow'
 })
 </script>
