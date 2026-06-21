@@ -56,11 +56,12 @@ useSeoMeta({
 		<div class="bg-base-300 shadow-lg p-6 rounded-lg mt-6">
 			<h2 class="text-2xl font-bold">Impressum</h2>
 			<p class="mt-2">
-				Elias Zeidler<br>
-				Einbrungerstraße 82<br>
-				40489 Düsseldorf<br><br>
+				lina.sh - Romuald Duckeck<br>
+				c/o Online-Impressum #9117<br>
+				Europaring 90<br>
+				53757 St Augustin<br><br>
 
-				Inhaltlich verantwortlich nach § 18 Abs. 2 MStV: Elias Zeidler
+				Inhaltlich verantwortlich nach § 18 Abs. 2 MStV: Romuald Duckeck
 			</p>
 		</div>
 
