@@ -56,11 +56,16 @@ useSeoMeta({
 		<div class="bg-base-300 shadow-lg p-6 rounded-lg mt-6">
 			<h2 class="text-2xl font-bold">Impressum</h2>
 			<p class="mt-2">
+				Angaben gemäß § 5 DDG<br>
+				<br>
 				lina.sh - Romuald Duckeck<br>
 				c/o Online-Impressum #9117<br>
 				Europaring 90<br>
-				53757 St Augustin<br><br>
-
+				53757 St Augustin<br>
+				<br>
+				E-Mail: cuiiliste.impressum@lina.sh<br>
+				Zweiter Kommunikationsweg: <a class="link" href="https://mein.online-impressum.de/lina-sh/">Kontaktformular via Online-Impressum</a><br>
+				<br>
 				Inhaltlich verantwortlich nach § 18 Abs. 2 MStV: Romuald Duckeck
 			</p>
 		</div>
